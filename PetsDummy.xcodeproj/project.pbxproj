@@ -12,6 +12,10 @@
 		4724DDA5286AAABA00A67029 /* DetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724DDA4286AAABA00A67029 /* DetailedViewController.swift */; };
 		4724DDA7286AAB0900A67029 /* PetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724DDA6286AAB0900A67029 /* PetViewModel.swift */; };
 		4724DDAE286B786100A67029 /* PetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4724DDAD286B786100A67029 /* PetTableViewCell.swift */; };
+		4736742128736231000A8DAA /* WorkHourUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736742028736231000A8DAA /* WorkHourUtil.swift */; };
+		473674242873645B000A8DAA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 473674232873645B000A8DAA /* Localizable.strings */; };
+		473674272873E0F7000A8DAA /* ConfigSettingsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473674262873E0F7000A8DAA /* ConfigSettingsRepositoryProtocol.swift */; };
+		4736742B2873ED27000A8DAA /* PetsRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4736742A2873ED27000A8DAA /* PetsRepositoryProtocol.swift */; };
 		476B1600286A321600F89314 /* ConfigSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B15FF286A321600F89314 /* ConfigSettings.swift */; };
 		476B1603286A347400F89314 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B1602286A347400F89314 /* DataTransferService.swift */; };
 		476B1606286A50E700F89314 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 476B1605286A50E700F89314 /* Observable.swift */; };
@@ -23,7 +27,7 @@
 		477D7E79286A1BEC0006EB51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477D7E77286A1BEC0006EB51 /* Main.storyboard */; };
 		477D7E7B286A1BED0006EB51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 477D7E7A286A1BED0006EB51 /* Assets.xcassets */; };
 		477D7E7E286A1BED0006EB51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 477D7E7C286A1BED0006EB51 /* LaunchScreen.storyboard */; };
-		477D7E89286A1BED0006EB51 /* DummyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477D7E88286A1BED0006EB51 /* DummyTests.swift */; };
+		477D7E89286A1BED0006EB51 /* PetsDummyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477D7E88286A1BED0006EB51 /* PetsDummyTests.swift */; };
 		477D7E93286A1BEE0006EB51 /* DummyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477D7E92286A1BEE0006EB51 /* DummyUITests.swift */; };
 		477D7E95286A1BEE0006EB51 /* DummyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477D7E94286A1BEE0006EB51 /* DummyUITestsLaunchTests.swift */; };
 		477D7EA4286A235B0006EB51 /* ConfigViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477D7EA3286A235B0006EB51 /* ConfigViewModel.swift */; };
@@ -61,6 +65,10 @@
 		4724DDA4286AAABA00A67029 /* DetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewController.swift; sourceTree = "<group>"; };
 		4724DDA6286AAB0900A67029 /* PetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetViewModel.swift; sourceTree = "<group>"; };
 		4724DDAD286B786100A67029 /* PetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetTableViewCell.swift; sourceTree = "<group>"; };
+		4736742028736231000A8DAA /* WorkHourUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkHourUtil.swift; sourceTree = "<group>"; };
+		473674232873645B000A8DAA /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		473674262873E0F7000A8DAA /* ConfigSettingsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSettingsRepositoryProtocol.swift; sourceTree = "<group>"; };
+		4736742A2873ED27000A8DAA /* PetsRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsRepositoryProtocol.swift; sourceTree = "<group>"; };
 		476B15FF286A321600F89314 /* ConfigSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigSettings.swift; sourceTree = "<group>"; };
 		476B1602286A347400F89314 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 		476B1605286A50E700F89314 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
@@ -75,7 +83,7 @@
 		477D7E7D286A1BED0006EB51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		477D7E7F286A1BED0006EB51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		477D7E84286A1BED0006EB51 /* PetsDummyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetsDummyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		477D7E88286A1BED0006EB51 /* DummyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyTests.swift; sourceTree = "<group>"; };
+		477D7E88286A1BED0006EB51 /* PetsDummyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsDummyTests.swift; sourceTree = "<group>"; };
 		477D7E8E286A1BEE0006EB51 /* PetsDummyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PetsDummyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		477D7E92286A1BEE0006EB51 /* DummyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyUITests.swift; sourceTree = "<group>"; };
 		477D7E94286A1BEE0006EB51 /* DummyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -124,6 +132,24 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		47367422287363D7000A8DAA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				477D7E7A286A1BED0006EB51 /* Assets.xcassets */,
+				473674232873645B000A8DAA /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		473674252873E0E5000A8DAA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				473674262873E0F7000A8DAA /* ConfigSettingsRepositoryProtocol.swift */,
+				4736742A2873ED27000A8DAA /* PetsRepositoryProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 		476B1601286A345C00F89314 /* NetworkService */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +163,7 @@
 			children = (
 				476B1605286A50E700F89314 /* Observable.swift */,
 				476B1609286A5E1100F89314 /* JSONResponseDecoder.swift */,
+				4736742028736231000A8DAA /* WorkHourUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -164,6 +191,7 @@
 		477D7E70286A1BEC0006EB51 /* Dummy */ = {
 			isa = PBXGroup;
 			children = (
+				47367422287363D7000A8DAA /* Resources */,
 				476B1604286A50DD00F89314 /* Utils */,
 				477D7EB9286A30820006EB51 /* EntityModels */,
 				477D7EAF286A2CC90006EB51 /* Repository */,
@@ -171,7 +199,6 @@
 				477D7EA1286A22BC0006EB51 /* Presentation */,
 				477D7E71286A1BEC0006EB51 /* AppDelegate.swift */,
 				477D7E73286A1BEC0006EB51 /* SceneDelegate.swift */,
-				477D7E7A286A1BED0006EB51 /* Assets.xcassets */,
 				477D7E7C286A1BED0006EB51 /* LaunchScreen.storyboard */,
 				477D7E7F286A1BED0006EB51 /* Info.plist */,
 			);
@@ -181,7 +208,7 @@
 		477D7E87286A1BED0006EB51 /* DummyTests */ = {
 			isa = PBXGroup;
 			children = (
-				477D7E88286A1BED0006EB51 /* DummyTests.swift */,
+				477D7E88286A1BED0006EB51 /* PetsDummyTests.swift */,
 			);
 			path = DummyTests;
 			sourceTree = "<group>";
@@ -242,6 +269,7 @@
 		477D7EAF286A2CC90006EB51 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				473674252873E0E5000A8DAA /* Protocol */,
 				477D7EB0286A2CDC0006EB51 /* ConfigSettingsRepository.swift */,
 				477D7EB2286A2CF20006EB51 /* PetsRepository.swift */,
 				4724DDA2286AA74100A67029 /* ImagesRepository.swift */,
@@ -372,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				477D7E7E286A1BED0006EB51 /* LaunchScreen.storyboard in Resources */,
+				473674242873645B000A8DAA /* Localizable.strings in Resources */,
 				477D7E7B286A1BED0006EB51 /* Assets.xcassets in Resources */,
 				477D7E79286A1BEC0006EB51 /* Main.storyboard in Resources */,
 			);
@@ -402,6 +431,7 @@
 				477D7EA7286A26C90006EB51 /* APIEndpoints.swift in Sources */,
 				476B1603286A347400F89314 /* DataTransferService.swift in Sources */,
 				4724DDA1286A655300A67029 /* PetItemViewModel.swift in Sources */,
+				4736742128736231000A8DAA /* WorkHourUtil.swift in Sources */,
 				477D7E76286A1BEC0006EB51 /* ViewController.swift in Sources */,
 				477D7EB1286A2CDC0006EB51 /* ConfigSettingsRepository.swift in Sources */,
 				477D7EB3286A2CF20006EB51 /* PetsRepository.swift in Sources */,
@@ -409,6 +439,7 @@
 				477D7E72286A1BEC0006EB51 /* AppDelegate.swift in Sources */,
 				477D7EA4286A235B0006EB51 /* ConfigViewModel.swift in Sources */,
 				477D7EAC286A2C940006EB51 /* ConfigResponseDTO.swift in Sources */,
+				473674272873E0F7000A8DAA /* ConfigSettingsRepositoryProtocol.swift in Sources */,
 				476B1608286A5DF500F89314 /* PetsViewModel.swift in Sources */,
 				476B160A286A5E1100F89314 /* JSONResponseDecoder.swift in Sources */,
 				476B1600286A321600F89314 /* ConfigSettings.swift in Sources */,
@@ -419,6 +450,7 @@
 				4724DDA7286AAB0900A67029 /* PetViewModel.swift in Sources */,
 				477D7E74286A1BEC0006EB51 /* SceneDelegate.swift in Sources */,
 				4724DDAE286B786100A67029 /* PetTableViewCell.swift in Sources */,
+				4736742B2873ED27000A8DAA /* PetsRepositoryProtocol.swift in Sources */,
 				477D7EB8286A2E710006EB51 /* PetsResponseDTO.swift in Sources */,
 				477D7EAE286A2C9F0006EB51 /* ConfigRequestDTO.swift in Sources */,
 			);
@@ -428,7 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				477D7E89286A1BED0006EB51 /* DummyTests.swift in Sources */,
+				477D7E89286A1BED0006EB51 /* PetsDummyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,13 +687,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dummy.example.com.DummyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -674,13 +709,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = dummy.example.com.DummyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

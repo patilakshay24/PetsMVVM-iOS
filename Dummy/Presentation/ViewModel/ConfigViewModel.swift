@@ -39,20 +39,18 @@ extension ConfigViewModel {
         let configSettingRepository = ConfigSettingsRepository()
         configSettingRepository.fetchConfigSettings { [weak self] result in
             self?.loading.value = .loadingDone
-            do {
-                self?.configSettings.value = try result.get()
-            } catch {
+            switch result {
+            case .success(let config):
+                self?.configSettings.value = config
+            case .failure(let error):
                 self?.error.value = error.localizedDescription
             }
         }
     }
     
     private func contactAlert() {
-        if (configSettings.value.checkTimeIsInWorkHours()) {
-            alertMessage.value = "Thank you for getting in touch with us. We'll get back to you as soon as possible"
-        } else {
-            alertMessage.value = "Work hours has ended. Please contact us again on the next work day"
-        }
+        let now = Date()
+        alertMessage.value = WorkHourUtil.checkTimeIsInWorkHours(configSettings.value.workHours, now)
     }
     
     func callButtonTapped() {

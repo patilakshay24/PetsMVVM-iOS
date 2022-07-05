@@ -7,7 +7,10 @@
 
 import Foundation
 
-final class ConfigSettingsRepository {
+/**
+    fetchs config settings from cloud
+ */
+final class ConfigSettingsRepository: ConfigSettingsRepositoryProtocol {
     public func fetchConfigSettings(completion: @escaping (Result<ConfigSettings, Error>) -> Void) {
         let dataTransferService = DataTransferService()
         let requestDTO = ConfigRequestDTO()

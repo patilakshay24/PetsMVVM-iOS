@@ -13,8 +13,6 @@ class ImagesRepository {
         DataTransferService().requestImage(with: endpoint) { (result: Result<Data?, NetworkError>) in
 
             let result = result.mapError { $0 as Error }
-//            let resultD = try? RawDataResponseDecoder<Data>().decode(result.get()!)
-//            let data = try? Data(contentsOf: result.get()!, options: [.mappedIfSafe])
             DispatchQueue.main.async { completion(result) }
         }
     }

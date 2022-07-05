@@ -34,7 +34,7 @@ final class DataTransferService {
 
     private func request(request: URLRequest, completion: @escaping CompletionHandler) {
         
-        self.request(request) { data, response, requestError in
+        _ = self.request(request) { data, response, requestError in
             
             if let requestError = requestError {
                 var error: NetworkError
@@ -54,7 +54,7 @@ final class DataTransferService {
     
     private func requestImage(request: URLRequest, completion: @escaping CompletionHandler) {
         
-        self.requestImage(request) { url, response, requestError in
+        _ = self.requestImage(request) { url, response, requestError in
             
             if let requestError = requestError {
                 var error: NetworkError
@@ -80,7 +80,6 @@ final class DataTransferService {
             case .success:
                 DispatchQueue.main.async { return completion(result) }
             case .failure(let error):
-//                let error = self.resolve(error: error)
                 DispatchQueue.main.async { return completion(.failure(error)) }
             }
         }
@@ -92,7 +91,6 @@ final class DataTransferService {
             case .success:
                 DispatchQueue.main.async { return completion(result) }
             case .failure(let error):
-//                let error = self.resolve(error: error)
                 DispatchQueue.main.async { return completion(.failure(error)) }
             }
         }

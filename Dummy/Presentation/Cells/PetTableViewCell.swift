@@ -28,7 +28,6 @@ class PetTableViewCell: UITableViewCell {
     func loadImage() {
         imageRepository?.fetchImage(viewModel.image_url) { result in
             if case let .success(data) = result {
-                let img: UIImage? = UIImage(data: data!)
                 self.petImageView.image = UIImage(data: data!)
             }
         }

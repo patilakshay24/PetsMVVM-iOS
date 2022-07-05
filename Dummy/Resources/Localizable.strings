@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  PetsDummy
+
+  Created by Akshay Patil on 04/07/22.
+  
+*/
+
+"Thank you for getting in touch with us" = "Thank you for getting in touch with us. We'll get back to you as soon as possible";
+"Work hours has ended" = "Work hours has ended. Please contact us again on the next work day";
+"Office Hours: " = "Office Hours: ";

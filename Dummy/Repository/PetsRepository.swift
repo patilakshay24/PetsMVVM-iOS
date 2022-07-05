@@ -7,8 +7,10 @@
 
 import Foundation
 
-
-final class PetsRepository {
+/**
+    fetchs pets json from cloud
+ */
+final class PetsRepository: PetsRepositoryProtocol {
     public func fetchConfigSettings(completion: @escaping (Result<[Pet], Error>) -> Void) {
         let dataTransferService = DataTransferService()
         let requestDTO = PetsRequestDTO()

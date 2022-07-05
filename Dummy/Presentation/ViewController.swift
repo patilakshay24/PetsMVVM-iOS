@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var chatCallStackView: UIStackView!
     private var configViewModel: ConfigViewModel!
     private var petsViewModel: PetsViewModel!
     private var petViewModel: PetViewModel? = nil
@@ -51,8 +52,6 @@ class ViewController: UIViewController {
                 self.tableView.isHidden = true
             } else {
                 self.timeLabel.text = ""
-//                self.callButton.isHidden = false
-//                self.chatButton.isHidden = false
                 self.tableView.isHidden = false
             }
         }
@@ -61,7 +60,8 @@ class ViewController: UIViewController {
         viewModel.configSettings.observe(on: self) { [weak self] value in
             self?.callButton.isHidden = !value.isCallEnabled
             self?.chatButton.isHidden = !value.isChatEnabled
-            self?.timeLabel.text = value.workHours
+            self?.chatCallStackView.isHidden = !value.isCallEnabled && !value.isChatEnabled
+            self?.timeLabel.text = "\(NSLocalizedString("Office Hours: ", comment: ""))\(value.workHours)"
         }
         
         viewModel.alertMessage.observe(on: self) { [weak self] value in
@@ -128,6 +128,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         petsViewModel.didSelectItem(at: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }

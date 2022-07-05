@@ -24,7 +24,6 @@ protocol PetsViewModelOutput {
 protocol PetsViewModelInput {
     func viewDidLoad()
     func didSelectItem(at index: Int)
-//    func loadImage()
 }
 
 
